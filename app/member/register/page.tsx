@@ -4,7 +4,11 @@ import React from "react";
 type Props = {};
 
 const RegisterPage = (props: Props) => {
-  return <RegisterForm />;
+  return (
+    <div className="h-full flex justify-center items-center">
+      <RegisterForm />
+    </div>
+  );
 };
 
 export default RegisterPage;
