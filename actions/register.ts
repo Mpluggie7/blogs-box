@@ -16,17 +16,17 @@ export const registerAction = async (
   const { name, email, password } = validateFields.data;
 
   const hashedPassword = await bcrypt.hash(password, 10);
-  console.log("hash passed");
+  // console.log("hash passed");
 
   const existingUser = await getUserByEmail(email);
-  console.log("check exist user passed");
+  // console.log("check exist user passed");
 
   if (existingUser) return { error: "Email already exists" };
 
   await db.user.create({
     data: { name, email, password: hashedPassword },
   });
-  console.log("create user passed");
+  // console.log("create user passed");
 
   return { success: "User created!" };
 };
