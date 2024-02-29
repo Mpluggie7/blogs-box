@@ -67,56 +67,5 @@ export default function EditorPage() {
     });
   };
 
-  return (
-    <div>
-      <Card className="w-[800px] shadow-md space-y-6 my-10">
-        <CardHeader>
-          <h1 className="text-3xl font-semibold text-center">
-            Post Something ...
-          </h1>
-        </CardHeader>
-        <CardContent>
-          <Form {...form}>
-            <form className="space-y-6" onSubmit={form.handleSubmit(savePost)}>
-              <div className="space-y-4">
-                <FormField
-                  control={form.control}
-                  name="title"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>TITLE</FormLabel>
-                      <FormControl>
-                        <Input
-                          {...field}
-                          placeholder="title name"
-                          type="text"
-                          disabled={isPending}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-
-              <DynamicTextEditor
-                value={content}
-                onChange={handleEditorChange}
-                disabled={isPending}
-              />
-
-              <FormError message={error} />
-              <FormSuccess message={success} />
-
-              <div className="w-full flex justify-end">
-                <Button type="submit" className="">
-                  Save Post
-                </Button>
-              </div>
-            </form>
-          </Form>
-        </CardContent>
-      </Card>
-    </div>
-  );
+  return <div></div>;
 }
