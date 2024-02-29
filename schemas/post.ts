@@ -10,3 +10,7 @@ export const PostSchema = z.object({
     .max(255, { message: "Less than or equal 255 characters" }),
   content: z.string(),
 });
+
+export const EditPostSchema = PostSchema.extend({
+  id: z.number(),
+});
