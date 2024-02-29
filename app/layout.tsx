@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
+import Navbar from "@/components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(inter.className, "bg-slate-100/30 text-slate-700")}>
-        {/* <nav className="">This is navbar</nav> */}
-        {children}
+        <Navbar />
+        <main className="relative overflow-hidden">{children}</main>
         <Toaster />
       </body>
     </html>

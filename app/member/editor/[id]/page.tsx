@@ -113,7 +113,7 @@ export default function EditorByIdPage({ params }: { params: { id: string } }) {
         setOpenDialog(false);
         toast({
           className: data.result ? "bg-green-300" : "",
-          variant: data.result ? "" : "destructive",
+          variant: data.result ? "default" : "destructive",
           description: data.message,
         });
       });
